@@ -117,5 +117,9 @@ public class PacMan : MonoBehaviour
     {
         return tilemap.GetTile(tilemap.WorldToCell(cellWorldPos));
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(collision.gameObject);
+    }
 }
